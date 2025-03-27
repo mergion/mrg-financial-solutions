@@ -43,8 +43,6 @@ const Hero = () => {
                   className="w-full h-auto object-cover rounded-xl shadow-lg transition-all duration-700 hover:scale-105" 
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-mrg-primary animate-bounce-subtle" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-mrg-secondary animate-bounce-subtle" style={{ animationDelay: '1.5s' }}></div>
             </div>
           </div>
         </div>
