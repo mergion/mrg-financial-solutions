@@ -38,14 +38,14 @@ const Contact = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Get In Touch</h2>
         
         {/* CTA Calculator Card */}
-        <div className="mb-20 rounded-3xl bg-[#0a3d1a] text-white py-16 px-8 text-center">
+        <div className="mb-20 rounded-3xl bg-[#0a3d1a] text-white py-16 px-8 text-center shadow-lg">
           <h3 className="text-4xl md:text-5xl font-bold mb-12 max-w-4xl mx-auto leading-tight">
             Calculate How Much You Qualify For At No Cost!
           </h3>
-          <a href="#" className="inline-block bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold py-4 px-8 rounded-full text-xl transition-colors">
+          <a href="#" className="inline-block bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold py-4 px-8 rounded-full text-xl transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300">
             How Much Can I Get?
           </a>
-          <p className="mt-10 text-lg">No SSN Required</p>
+          <p className="mt-10 text-lg opacity-90">No SSN Required</p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">

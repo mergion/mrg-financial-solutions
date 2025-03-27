@@ -8,13 +8,6 @@ const Footer = () => {
       <div className="container max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <img 
-                src="/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png" 
-                alt="MRG Holdings Logo" 
-                className="h-10" 
-              />
-            </div>
             <p className="text-gray-300 mb-6">
               MRG Holdings provides tailored financial solutions to help businesses thrive and expand.
             </p>

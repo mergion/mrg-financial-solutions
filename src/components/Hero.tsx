@@ -6,7 +6,6 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center bg-mrg-light pt-20">
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-mrg-primary to-mrg-secondary opacity-10"></div>
-        <div className="absolute top-0 left-0 right-0 h-1/2 bg-grid-pattern bg-repeat opacity-5"></div>
       </div>
       
       <div className="container max-w-7xl mx-auto px-4 py-20 z-10">
