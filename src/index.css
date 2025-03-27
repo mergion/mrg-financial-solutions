@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,61 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg rounded-xl transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .primary-gradient {
+    @apply bg-gradient-to-r from-mrg-primary to-mrg-secondary;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-mrg-primary to-mrg-secondary bg-clip-text text-transparent;
+  }
+  
+  .nav-link {
+    @apply relative text-mrg-gray hover:text-mrg-secondary transition-colors duration-200 
+           after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 
+           after:bottom-0 after:left-0 after:bg-mrg-secondary after:origin-bottom-right 
+           after:transition-transform after:duration-300 hover:after:scale-x-100 
+           hover:after:origin-bottom-left;
+  }
+  
+  .learn-more-btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium 
+           ring-offset-background transition-colors focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+           disabled:pointer-events-none disabled:opacity-50 bg-mrg-secondary text-white 
+           hover:bg-mrg-secondary/90 h-10 px-4 py-2;
+  }
+  
+  .primary-btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium 
+           ring-offset-background transition-colors focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+           disabled:pointer-events-none disabled:opacity-50 bg-mrg-primary text-white 
+           hover:bg-mrg-primary/90 h-12 px-6 py-3;
+  }
+  
+  .service-card {
+    @apply glass-card p-6 flex flex-col h-full;
+  }
+  
+  .service-card-title {
+    @apply text-xl font-semibold mb-2 text-mrg-primary;
+  }
+  
+  .service-card-text {
+    @apply text-mrg-gray mb-4 flex-grow;
   }
 }
