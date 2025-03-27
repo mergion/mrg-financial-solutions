@@ -10,9 +10,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img 
-                src="/lovable-uploads/fa62e1a7-42b2-4c7f-b184-2f73e7962683.png" 
+                src="/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png" 
                 alt="MRG Holdings Logo" 
-                className="h-10 brightness-0 invert" 
+                className="h-10" 
               />
             </div>
             <p className="text-gray-300 mb-6">
@@ -41,7 +41,8 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Term Loans</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Business Line of Credit</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Working Capital</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Commercial Real Estate</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Equipment Financing</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Invoice Factoring</a></li>
             </ul>
           </div>
           

@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger
 } from "@/components/ui/accordion";
-import { Building, Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   const faqs = [
@@ -36,84 +35,45 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-white relative">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-mrg-secondary/5 to-white pointer-events-none"></div>
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="animate-fade-in">
-            <div className="inline-block px-4 py-1 bg-mrg-secondary/10 text-mrg-secondary rounded-full mb-4">
-              <span className="text-sm font-medium">Frequently Asked Questions</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-mrg-primary mb-6">
-              Everything You Need to Know
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Get In Touch</h2>
+        
+        {/* CTA Calculator Card */}
+        <div className="mb-20 rounded-3xl bg-[#0a3d1a] text-white py-16 px-8 text-center">
+          <h3 className="text-4xl md:text-5xl font-bold mb-12 max-w-4xl mx-auto leading-tight">
+            Calculate How Much You Qualify For At No Cost!
+          </h3>
+          <a href="#" className="inline-block bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold py-4 px-8 rounded-full text-xl transition-colors">
+            How Much Can I Get?
+          </a>
+          <p className="mt-10 text-lg">No SSN Required</p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          <div className="lg:col-span-1">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#003b1a]">
+              Frequently Asked Questions
             </h2>
-            <p className="text-mrg-gray mb-8">
-              Find answers to common questions about our financing solutions. If you don't see what you're looking for, our team is ready to help.
+            <p className="text-gray-600 mb-4">
+              Need help with something else? Simply send us an email at{" "}
+              <a href="mailto:info@mrgholdings.com" className="text-[#22c55e] hover:underline">
+                info@mrgholdings.com
+              </a>
             </p>
-            
-            <Accordion type="single" collapsible className="w-full mb-8">
+          </div>
+          
+          <div className="lg:col-span-2">
+            <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-mrg-primary font-medium text-left">
+                <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
+                  <AccordionTrigger className="text-xl font-medium text-left py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-mrg-gray">
+                  <AccordionContent className="text-gray-600 text-lg pb-6">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
-            
-            <div className="mt-8">
-              <a href="#" className="primary-btn">
-                Apply For Funding
-              </a>
-            </div>
-          </div>
-          
-          <div className="glass-card p-8 animate-fade-in relative overflow-hidden">
-            <img 
-              src="/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png" 
-              alt="Financial District" 
-              className="w-full h-auto rounded-lg shadow-lg mb-8"
-            />
-            
-            <h3 className="text-2xl font-semibold text-mrg-primary mb-6">Get In Touch</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center h-12 w-12 rounded-md bg-mrg-primary/10 text-mrg-primary">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-mrg-primary">Phone</h3>
-                  <p className="mt-1 text-mrg-gray">+1 (800) 555-1234</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center h-12 w-12 rounded-md bg-mrg-primary/10 text-mrg-primary">
-                    <Mail className="h-6 w-6" />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-mrg-primary">Email</h3>
-                  <p className="mt-1 text-mrg-gray">info@mrgholdings.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center h-12 w-12 rounded-md bg-mrg-primary/10 text-mrg-primary">
-                    <Building className="h-6 w-6" />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-mrg-primary">Office</h3>
-                  <p className="mt-1 text-mrg-gray">123 Financial District<br />New York, NY 10004</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
