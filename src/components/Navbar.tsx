@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/fa62e1a7-42b2-4c7f-b184-2f73e7962683.png" 
+              src="/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png" 
               alt="MRG Holdings Logo" 
               className="h-10" 
             />
@@ -37,7 +37,7 @@ const Navbar = () => {
           <Link to="/" className="nav-link font-medium">Home</Link>
           <a href="#services" className="nav-link font-medium">Services</a>
           <a href="#about" className="nav-link font-medium">About</a>
-          <a href="#contact" className="nav-link font-medium">Contact</a>
+          <a href="#contact" className="nav-link font-medium">FAQ</a>
         </nav>
         
         <div className="hidden md:block">

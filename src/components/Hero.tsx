@@ -39,7 +39,7 @@ const Hero = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-mrg-primary to-mrg-secondary rounded-2xl blur opacity-30 animate-pulse"></div>
               <div className="relative glass-card overflow-hidden rounded-2xl">
                 <img 
-                  src="/lovable-uploads/c5cea946-b9fd-47bb-91ea-ccf0d47edff8.png" 
+                  src="/lovable-uploads/f617c57a-be5a-4020-8b7b-200991a4e800.png" 
                   alt="Business Growth" 
                   className="w-full h-auto object-cover rounded-xl shadow-lg transition-all duration-700 hover:scale-105" 
                 />

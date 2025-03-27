@@ -24,38 +24,33 @@ const Services = () => {
   const services = [
     {
       title: "SBA Loans",
-      description: "Tailored federal-backed loans for business growth and expansion.",
+      description: "Government-guaranteed financing solutions to foster expansion and sustainable growth for your enterprise.",
       delay: 0.1,
     },
     {
       title: "Term Loans",
-      description: "Fixed-rate loans for immediate, large-scale business needs.",
+      description: "Secure long-term capital with predictable payments designed for substantial business investments.",
       delay: 0.2,
     },
     {
       title: "Business Line of Credit",
-      description: "Flexible credit access for ongoing business expenses.",
+      description: "Revolving funding access that provides essential financial flexibility for operational agility.",
       delay: 0.3,
     },
     {
       title: "Working Capital",
-      description: "Short-term funding to manage daily business operations.",
+      description: "Immediate liquidity solutions to optimize cash flow and facilitate day-to-day operations.",
       delay: 0.4,
     },
     {
-      title: "Commercial Real Estate",
-      description: "Loans for purchasing or refinancing business properties.",
+      title: "Equipment Financing",
+      description: "Strategic acquisition options for critical business machinery with favorable payment structures.",
       delay: 0.5,
     },
     {
-      title: "Equipment Financing",
-      description: "Funding for purchasing or leasing business equipment.",
-      delay: 0.6,
-    },
-    {
       title: "Invoice Factoring",
-      description: "Convert unpaid invoices into immediate working capital.",
-      delay: 0.7,
+      description: "Transform outstanding client invoices into instant cash flow to strengthen your financial position.",
+      delay: 0.6,
     },
   ];
 

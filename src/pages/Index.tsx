@@ -14,10 +14,10 @@ const Index = () => {
     if (!favicon) {
       const newFavicon = document.createElement('link');
       newFavicon.rel = 'icon';
-      newFavicon.href = '/lovable-uploads/2a59b822-e85a-4b48-959a-7d946546e494.png';
+      newFavicon.href = '/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png';
       document.head.appendChild(newFavicon);
     } else {
-      favicon.setAttribute('href', '/lovable-uploads/2a59b822-e85a-4b48-959a-7d946546e494.png');
+      favicon.setAttribute('href', '/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png');
     }
     
     // Update title

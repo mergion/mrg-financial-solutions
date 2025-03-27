@@ -1,23 +1,81 @@
 
 import React from 'react';
+import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from "@/components/ui/accordion";
 import { Building, Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
+  const faqs = [
+    {
+      question: "How Can I Get Funded?",
+      answer: "Getting funded is simple. Fill out our quick online application, submit the required documentation, and our financial experts will guide you through the entire process. We'll match you with the best financing solution for your business needs."
+    },
+    {
+      question: "Who Is Eligible?",
+      answer: "Businesses operating for 6+ months with a checking account and at least $10K in monthly revenue can qualify for funding from $10K to $5M."
+    },
+    {
+      question: "Will My Credit Be Affected?",
+      answer: "Our initial funding assessment involves only a soft credit inquiry, which doesn't impact your credit score. A hard credit check will only be conducted with your explicit permission when proceeding with certain financing options."
+    },
+    {
+      question: "What Are The Costs?",
+      answer: "Our financing solutions come with transparent and competitive rates based on your business profile, funding amount, and selected products. We provide a detailed breakdown of all costs before you sign any agreement."
+    },
+    {
+      question: "How Long Does It Take?",
+      answer: "After completing the application and providing required documentation, many clients receive funding within 24-72 hours. More complex financing packages, like SBA loans, may require additional processing time."
+    }
+  ];
+
   return (
     <section id="contact" className="py-24 bg-white relative">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-mrg-secondary/5 to-white pointer-events-none"></div>
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="animate-fade-in">
             <div className="inline-block px-4 py-1 bg-mrg-secondary/10 text-mrg-secondary rounded-full mb-4">
-              <span className="text-sm font-medium">Get In Touch</span>
+              <span className="text-sm font-medium">Frequently Asked Questions</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-mrg-primary mb-4">
-              Ready to Accelerate Your Business Growth?
+            <h2 className="text-3xl md:text-4xl font-bold text-mrg-primary mb-6">
+              Everything You Need to Know
             </h2>
             <p className="text-mrg-gray mb-8">
-              Speak with our financial experts today to find the perfect funding solution for your business needs. We're here to help you succeed.
+              Find answers to common questions about our financing solutions. If you don't see what you're looking for, our team is ready to help.
             </p>
+            
+            <Accordion type="single" collapsible className="w-full mb-8">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-mrg-primary font-medium text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-mrg-gray">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            
+            <div className="mt-8">
+              <a href="#" className="primary-btn">
+                Apply For Funding
+              </a>
+            </div>
+          </div>
+          
+          <div className="glass-card p-8 animate-fade-in relative overflow-hidden">
+            <img 
+              src="/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png" 
+              alt="Financial District" 
+              className="w-full h-auto rounded-lg shadow-lg mb-8"
+            />
+            
+            <h3 className="text-2xl font-semibold text-mrg-primary mb-6">Get In Touch</h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -56,59 +114,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="glass-card p-8 animate-fade-in">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-mrg-primary">First Name</label>
-                  <input 
-                    type="text" 
-                    className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="John"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-mrg-primary">Last Name</label>
-                  <input 
-                    type="text" 
-                    className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-mrg-primary">Email</label>
-                <input 
-                  type="email" 
-                  className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  placeholder="john.doe@example.com"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-mrg-primary">Company</label>
-                <input 
-                  type="text" 
-                  className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  placeholder="ABC Company"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-mrg-primary">Message</label>
-                <textarea 
-                  className="flex w-full rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-32"
-                  placeholder="Tell us about your business and financial needs..."
-                />
-              </div>
-              
-              <button type="submit" className="w-full primary-btn">
-                Submit Inquiry
-              </button>
-            </form>
           </div>
         </div>
       </div>
