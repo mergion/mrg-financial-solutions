@@ -6,6 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 const Contact = () => {
   const faqs = [
@@ -32,30 +34,28 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-slate-100 relative">
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-100/50 to-white pointer-events-none"></div>
-      <div className="container max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-slate-800">Get In Touch</h2>
-        
-        {/* CTA Calculator Card */}
-        <div className="mb-20 rounded-xl overflow-hidden bg-gradient-to-r from-[#1a365d] to-[#2a4a73] text-white">
-          <div className="px-8 py-16 md:py-20 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 leading-tight">
-                Calculate How Much You Qualify For At No Cost!
-              </h3>
-              <a 
-                href="#" 
-                className="inline-block bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white font-medium py-4 px-10 rounded-full text-xl transition-all duration-300 shadow-[0_4px_14px_0_rgba(59,130,246,0.4)] hover:shadow-[0_6px_20px_0_rgba(59,130,246,0.65)] hover:translate-y-[-2px]"
-              >
-                How Much Can I Get?
-              </a>
-              <p className="mt-8 text-gray-100 text-lg font-light">No SSN Required</p>
-            </div>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-0"></div>
+    <section id="contact" className="py-24 relative">
+      {/* Hero Banner Section - Let's Talk About Your Next Move */}
+      <div className="w-full bg-[#111827] text-white py-32 mb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/e3f52500-5b85-4d6c-8db4-5793a52a355e.png')] bg-cover bg-center opacity-60 z-0"></div>
+        <div className="container max-w-5xl mx-auto px-4 relative z-20 text-center">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            Let's talk about<br />your next move
+          </h2>
+          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto">
+            If you're looking for measurable impact and sustainable growth, let's start the conversation.
+          </p>
+          <Button 
+            className="bg-blue-600 hover:bg-blue-700 text-xl py-6 px-10 rounded-md"
+            size="lg"
+          >
+            Book a Call
+          </Button>
         </div>
-        
+      </div>
+      
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
@@ -72,18 +72,44 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`} 
-                  className={`mb-4 rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${index === 0 ? 'bg-slate-50' : 'bg-white'}`}
-                >
-                  <AccordionTrigger className="text-xl font-medium text-left p-6 hover:no-underline hover:bg-slate-50 text-slate-800">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-slate-600 text-lg px-6 pb-6 border-t border-slate-100 bg-white">
+                <div key={index} className="mb-4 rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
+                  <h3 className="border-b border-slate-100">
+                    <button
+                      onClick={(e) => {
+                        const content = e.currentTarget.nextElementSibling;
+                        const isOpen = content?.classList.contains('block');
+                        
+                        // Close all other FAQ items
+                        document.querySelectorAll('.faq-content').forEach(el => {
+                          el.classList.remove('block');
+                          el.classList.add('hidden');
+                        });
+                        
+                        document.querySelectorAll('.faq-icon').forEach(el => {
+                          el.classList.remove('rotate-180');
+                        });
+                        
+                        // Toggle current FAQ item
+                        if (isOpen) {
+                          content?.classList.remove('block');
+                          content?.classList.add('hidden');
+                          e.currentTarget.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                        } else {
+                          content?.classList.remove('hidden');
+                          content?.classList.add('block');
+                          e.currentTarget.querySelector('.faq-icon')?.classList.add('rotate-180');
+                        }
+                      }}
+                      className="flex w-full justify-between items-center p-6 text-left text-xl font-medium text-slate-800 hover:bg-slate-50 transition-colors"
+                    >
+                      {faq.question}
+                      <ChevronDown className="h-6 w-6 faq-icon transition-transform duration-200" />
+                    </button>
+                  </h3>
+                  <div className={`faq-content hidden p-6 text-slate-600 text-lg border-t border-slate-100 bg-white`}>
                     {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                </div>
               ))}
             </Accordion>
           </div>
