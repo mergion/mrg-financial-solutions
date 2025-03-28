@@ -32,13 +32,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white relative">
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-mrg-secondary/5 to-white pointer-events-none"></div>
+    <section id="contact" className="py-24 bg-gradient-to-b from-white to-slate-100 relative">
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-100/50 to-white pointer-events-none"></div>
       <div className="container max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Get In Touch</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-slate-800">Get In Touch</h2>
         
         {/* CTA Calculator Card */}
-        <div className="mb-20 rounded-xl overflow-hidden bg-gradient-to-r from-[#04301c] to-[#0a4224] text-white">
+        <div className="mb-20 rounded-xl overflow-hidden bg-gradient-to-r from-[#1a365d] to-[#2a4a73] text-white">
           <div className="px-8 py-16 md:py-20 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 leading-tight">
@@ -46,25 +46,24 @@ const Contact = () => {
               </h3>
               <a 
                 href="#" 
-                className="inline-block bg-gradient-to-r from-[#22c55e] to-[#16a34a] text-white font-medium py-4 px-10 rounded-full text-xl transition-all duration-300 shadow-[0_4px_14px_0_rgba(34,197,94,0.4)] hover:shadow-[0_6px_20px_0_rgba(34,197,94,0.65)] hover:translate-y-[-2px]"
+                className="inline-block bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white font-medium py-4 px-10 rounded-full text-xl transition-all duration-300 shadow-[0_4px_14px_0_rgba(59,130,246,0.4)] hover:shadow-[0_6px_20px_0_rgba(59,130,246,0.65)] hover:translate-y-[-2px]"
               >
                 How Much Can I Get?
               </a>
               <p className="mt-8 text-gray-100 text-lg font-light">No SSN Required</p>
             </div>
           </div>
-          {/* Add subtle pattern overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-0"></div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#003b1a]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-slate-600 mb-4">
               Need help with something else? Simply send us an email at{" "}
-              <a href="mailto:info@rtmholdings.com" className="text-[#0056b3] hover:text-[#003b85] hover:underline transition-colors">
+              <a href="mailto:info@rtmholdings.com" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
                 info@rtmholdings.com
               </a>
             </p>
@@ -76,12 +75,12 @@ const Contact = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`} 
-                  className={`mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${index === 0 ? 'bg-mrg-secondary/5' : 'bg-white'}`}
+                  className={`mb-4 rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${index === 0 ? 'bg-slate-50' : 'bg-white'}`}
                 >
-                  <AccordionTrigger className="text-xl font-medium text-left p-6 hover:no-underline hover:bg-gray-50 text-mrg-primary">
+                  <AccordionTrigger className="text-xl font-medium text-left p-6 hover:no-underline hover:bg-slate-50 text-slate-800">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 text-lg px-6 pb-6 border-t border-gray-100 bg-white">
+                  <AccordionContent className="text-slate-600 text-lg px-6 pb-6 border-t border-slate-100 bg-white">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
