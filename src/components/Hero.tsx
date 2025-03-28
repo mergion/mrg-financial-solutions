@@ -20,7 +20,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-mrg-gray mb-8 max-w-xl animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              MRG Holdings provides tailored financial solutions to help businesses like yours thrive and expand. Access the funding you need with competitive terms.
+              RTM Holdings provides tailored financial solutions to help businesses like yours thrive and expand. Access the funding you need with competitive terms.
             </p>
             
             <div className="flex flex-wrap gap-4 animate-slide-up" style={{ animationDelay: '0.8s' }}>

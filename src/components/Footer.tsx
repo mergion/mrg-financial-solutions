@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <p className="text-gray-300 mb-6">
-              MRG Holdings provides tailored financial solutions to help businesses thrive and expand.
+              RTM Holdings provides tailored financial solutions to help businesses thrive and expand.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
@@ -61,7 +61,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © {new Date().getFullYear()} MRG Holdings. All rights reserved.
+            © {new Date().getFullYear()} RTM Holdings. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <p className="text-gray-300 text-sm">

@@ -14,14 +14,14 @@ const Index = () => {
     if (!favicon) {
       const newFavicon = document.createElement('link');
       newFavicon.rel = 'icon';
-      newFavicon.href = '/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png';
+      newFavicon.href = '/lovable-uploads/6f300202-3773-4961-ac73-134610b95392.png';
       document.head.appendChild(newFavicon);
     } else {
-      favicon.setAttribute('href', '/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png');
+      favicon.setAttribute('href', '/lovable-uploads/6f300202-3773-4961-ac73-134610b95392.png');
     }
     
     // Update title
-    document.title = 'MRG Holdings | Financial Solutions for Business Growth';
+    document.title = 'RTM Holdings | Financial Solutions for Business Growth';
   }, []);
 
   return (

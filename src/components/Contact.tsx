@@ -64,8 +64,8 @@ const Contact = () => {
             </h2>
             <p className="text-gray-600 mb-4">
               Need help with something else? Simply send us an email at{" "}
-              <a href="mailto:info@mrgholdings.com" className="text-[#0056b3] hover:text-[#003b85] hover:underline transition-colors">
-                info@mrgholdings.com
+              <a href="mailto:info@rtmholdings.com" className="text-[#0056b3] hover:text-[#003b85] hover:underline transition-colors">
+                info@rtmholdings.com
               </a>
             </p>
           </div>

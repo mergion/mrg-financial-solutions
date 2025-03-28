@@ -31,8 +31,8 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/450ceb4a-79ff-4f87-be58-af25678b69b2.png" 
-              alt="MRG Holdings Logo" 
+              src="/lovable-uploads/6f300202-3773-4961-ac73-134610b95392.png" 
+              alt="RTM Holdings Logo" 
               className="h-10" 
             />
           </Link>
