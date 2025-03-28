@@ -50,7 +50,7 @@ const Trust = () => {
               Building Success Through Trusted Financial Partnerships
             </h2>
             <p className="text-mrg-gray mb-8">
-              At MRG Holdings, we understand that every business has unique financial needs. Our approach combines industry expertise with personalized service to help you secure the right funding solution.
+              At RTM Holdings, we understand that every business has unique financial needs. Our approach combines industry expertise with personalized service to help you secure the right funding solution.
             </p>
             
             <div className="flex flex-col space-y-4">
