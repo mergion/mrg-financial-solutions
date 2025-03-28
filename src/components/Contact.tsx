@@ -1,15 +1,15 @@
 
-import React from 'react';
-import { 
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import React, { useState } from 'react';
 import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   const faqs = [
     {
       question: "How Can I Get Funded?",
@@ -70,48 +70,28 @@ const Contact = () => {
           </div>
           
           <div className="lg:col-span-2">
-            <Accordion type="single" collapsible className="w-full">
+            <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="mb-4 rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
+                <div key={index} className="rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
                   <h3 className="border-b border-slate-100">
                     <button
-                      onClick={(e) => {
-                        const content = e.currentTarget.nextElementSibling;
-                        const isOpen = content?.classList.contains('block');
-                        
-                        // Close all other FAQ items
-                        document.querySelectorAll('.faq-content').forEach(el => {
-                          el.classList.remove('block');
-                          el.classList.add('hidden');
-                        });
-                        
-                        document.querySelectorAll('.faq-icon').forEach(el => {
-                          el.classList.remove('rotate-180');
-                        });
-                        
-                        // Toggle current FAQ item
-                        if (isOpen) {
-                          content?.classList.remove('block');
-                          content?.classList.add('hidden');
-                          e.currentTarget.querySelector('.faq-icon')?.classList.remove('rotate-180');
-                        } else {
-                          content?.classList.remove('hidden');
-                          content?.classList.add('block');
-                          e.currentTarget.querySelector('.faq-icon')?.classList.add('rotate-180');
-                        }
-                      }}
+                      onClick={() => toggleFAQ(index)}
                       className="flex w-full justify-between items-center p-6 text-left text-xl font-medium text-slate-800 hover:bg-slate-50 transition-colors"
                     >
                       {faq.question}
-                      <ChevronDown className="h-6 w-6 faq-icon transition-transform duration-200" />
+                      <ChevronDown className={`h-6 w-6 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} />
                     </button>
                   </h3>
-                  <div className={`faq-content hidden p-6 text-slate-600 text-lg border-t border-slate-100 bg-white`}>
+                  <div 
+                    className={`p-6 text-slate-600 text-lg border-t border-slate-100 bg-white transition-all duration-300 ${
+                      openIndex === index ? 'block' : 'hidden'
+                    }`}
+                  >
                     {faq.answer}
                   </div>
                 </div>
               ))}
-            </Accordion>
+            </div>
           </div>
         </div>
       </div>
