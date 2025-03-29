@@ -12,7 +12,12 @@ const Index = () => {
   useEffect(() => {
     const favicon = document.querySelector('link[rel="icon"]');
     if (favicon) {
-      favicon.setAttribute('href', '/lovable-uploads/56fffc33-3582-4b6c-bb56-bfde47fe7de1.png');
+      favicon.setAttribute('href', '/lovable-uploads/ff85c20f-c431-426c-b4e0-177ab4ef9b2f.png');
+    } else {
+      const newFavicon = document.createElement('link');
+      newFavicon.rel = 'icon';
+      newFavicon.href = '/lovable-uploads/ff85c20f-c431-426c-b4e0-177ab4ef9b2f.png';
+      document.head.appendChild(newFavicon);
     }
     
     // Update title

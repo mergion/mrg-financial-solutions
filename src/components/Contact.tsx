@@ -34,7 +34,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-10 relative">
+    <section id="contact" className="relative">
       {/* Hero Banner Section - Let's Talk About Your Next Move */}
       <div className="w-full bg-mrg-primary text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-mrg-primary to-mrg-secondary/90 z-10"></div>
@@ -55,7 +55,7 @@ const Contact = () => {
         </div>
       </div>
       
-      <div className="container max-w-7xl mx-auto px-4 mt-20">
+      <div className="container max-w-7xl mx-auto px-4 mt-20 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-mrg-primary">
