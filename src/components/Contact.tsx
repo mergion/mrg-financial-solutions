@@ -34,36 +34,36 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-10 relative">
       {/* Hero Banner Section - Let's Talk About Your Next Move */}
-      <div className="w-full bg-[#111827] text-white py-32 mb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10"></div>
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/e3f52500-5b85-4d6c-8db4-5793a52a355e.png')] bg-cover bg-center opacity-60 z-0"></div>
+      <div className="w-full bg-mrg-primary text-white py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-mrg-primary to-mrg-secondary/90 z-10"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/e3f52500-5b85-4d6c-8db4-5793a52a355e.png')] bg-cover bg-center opacity-40 z-0"></div>
         <div className="container max-w-5xl mx-auto px-4 relative z-20 text-center">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            Let's talk about<br />your next move
+            Ready to secure<br />your business funding?
           </h2>
           <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto">
-            If you're looking for measurable impact and sustainable growth, let's start the conversation.
+            Whether you need working capital, equipment financing, or growth funds, our team is ready to help you access the right funding solution.
           </p>
           <Button 
-            className="bg-blue-600 hover:bg-blue-700 text-xl py-6 px-10 rounded-md"
+            className="bg-white text-mrg-primary hover:bg-mrg-light hover:text-mrg-secondary text-xl py-6 px-10 rounded-md font-bold transition-all duration-300"
             size="lg"
           >
-            Book a Call
+            Apply For Funding
           </Button>
         </div>
       </div>
       
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4 mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-mrg-primary">
               Frequently Asked Questions
             </h2>
-            <p className="text-slate-600 mb-4">
+            <p className="text-mrg-gray mb-4">
               Need help with something else? Simply send us an email at{" "}
-              <a href="mailto:info@rtmholdings.com" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+              <a href="mailto:info@rtmholdings.com" className="text-mrg-secondary hover:text-mrg-primary hover:underline transition-colors">
                 info@rtmholdings.com
               </a>
             </p>
@@ -76,7 +76,7 @@ const Contact = () => {
                   <h3 className="border-b border-slate-100">
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="flex w-full justify-between items-center p-6 text-left text-xl font-medium text-slate-800 hover:bg-slate-50 transition-colors"
+                      className="flex w-full justify-between items-center p-6 text-left text-xl font-medium text-mrg-primary hover:bg-slate-50 transition-colors"
                     >
                       {faq.question}
                       <ChevronDown className={`h-6 w-6 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`} />
