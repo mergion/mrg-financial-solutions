@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   ArrowRight, 
@@ -7,7 +8,8 @@ import {
   ShieldCheck, 
   TrendingUp, 
   BarChart, 
-  Warehouse 
+  Warehouse,
+  BadgeCheck
 } from 'lucide-react';
 
 type ServiceProps = {
@@ -78,7 +80,7 @@ const Services = () => {
       title: "Business Credit Building",
       description: "Strategic programs to establish and strengthen your business credit profile.",
       delay: 0.8,
-      icon: Building
+      icon: BadgeCheck
     },
     {
       title: "ERC/R&D Tax Credit Recovery",
