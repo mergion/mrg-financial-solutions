@@ -1,5 +1,14 @@
 import React from 'react';
-import { ArrowRight, BuildingIcon, BadgeDollarSignIcon, CreditCardIcon } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Building, 
+  DollarSign, 
+  CreditCard, 
+  ShieldCheck, 
+  TrendingUp, 
+  BarChart, 
+  Warehouse 
+} from 'lucide-react';
 
 type ServiceProps = {
   title: string;
@@ -27,55 +36,55 @@ const Services = () => {
       title: "SBA Loans",
       description: "Government-guaranteed financing solutions to foster expansion and sustainable growth for your enterprise.",
       delay: 0.1,
-      icon: BuildingIcon
+      icon: Building
     },
     {
       title: "Term Loans",
       description: "Secure long-term capital with predictable payments designed for substantial business investments.",
       delay: 0.2,
-      icon: BadgeDollarSignIcon
+      icon: DollarSign
     },
     {
       title: "Business Line of Credit",
       description: "Revolving funding access that provides essential financial flexibility for operational agility.",
       delay: 0.3,
-      icon: CreditCardIcon
+      icon: CreditCard
     },
     {
       title: "Working Capital",
       description: "Immediate liquidity solutions to optimize cash flow and facilitate day-to-day operations.",
       delay: 0.4,
-      icon: BadgeDollarSignIcon
+      icon: BarChart
     },
     {
       title: "Equipment Financing",
       description: "Strategic acquisition options for critical business machinery with favorable payment structures.",
       delay: 0.5,
-      icon: BuildingIcon
+      icon: Warehouse
     },
     {
       title: "Invoice Factoring",
       description: "Transform outstanding client invoices into instant cash flow to strengthen your financial position.",
       delay: 0.6,
-      icon: CreditCardIcon
+      icon: TrendingUp
     },
     {
       title: "High-Ticket Credit Repair",
       description: "Comprehensive credit restoration services for both personal and business credit profiles.",
       delay: 0.7,
-      icon: CreditCardIcon
+      icon: ShieldCheck
     },
     {
       title: "Business Credit Building",
       description: "Strategic programs to establish and strengthen your business credit profile.",
       delay: 0.8,
-      icon: BuildingIcon
+      icon: Building
     },
     {
       title: "ERC/R&D Tax Credit Recovery",
       description: "Expert assistance in identifying and claiming eligible tax credits for your business growth.",
       delay: 0.9,
-      icon: BadgeDollarSignIcon
+      icon: DollarSign
     }
   ];
 
