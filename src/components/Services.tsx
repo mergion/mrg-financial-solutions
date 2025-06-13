@@ -5,11 +5,9 @@ import {
   Building, 
   DollarSign, 
   CreditCard, 
-  ShieldCheck, 
   TrendingUp, 
   BarChart, 
-  Warehouse,
-  BadgeCheck
+  Warehouse
 } from 'lucide-react';
 
 type ServiceProps = {
@@ -69,24 +67,6 @@ const Services = () => {
       description: "Transform outstanding client invoices into instant cash flow to strengthen your financial position.",
       delay: 0.6,
       icon: TrendingUp
-    },
-    {
-      title: "High-Ticket Credit Repair",
-      description: "Comprehensive credit restoration services for both personal and business credit profiles.",
-      delay: 0.7,
-      icon: ShieldCheck
-    },
-    {
-      title: "Business Credit Building",
-      description: "Strategic programs to establish and strengthen your business credit profile.",
-      delay: 0.8,
-      icon: BadgeCheck
-    },
-    {
-      title: "ERC/R&D Tax Credit Recovery",
-      description: "Expert assistance in identifying and claiming eligible tax credits for your business growth.",
-      delay: 0.9,
-      icon: DollarSign
     }
   ];
 

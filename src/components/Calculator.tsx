@@ -8,14 +8,14 @@ import { Button } from './ui/button';
 import { Slider } from './ui/slider';
 
 const Calculator = () => {
-  const [dailyRevenue, setDailyRevenue] = useState<number>(1000);
+  const [monthlyRevenue, setMonthlyRevenue] = useState<number>(30000);
   const [businessAge, setBusinessAge] = useState<number>(12);
   const [creditScore, setCreditScore] = useState<number>(650);
   const [fundingAmount, setFundingAmount] = useState<number | null>(null);
 
   const calculateFunding = () => {
-    // Base calculation: Daily revenue * 30 days * multiplier based on factors
-    let baseAmount = dailyRevenue * 30;
+    // Base calculation: Monthly revenue * multiplier based on factors
+    let baseAmount = monthlyRevenue;
     
     // Business age multiplier (6+ months = 1.0, 12+ months = 1.2, 24+ months = 1.5)
     let ageMultiplier = 1.0;
@@ -56,7 +56,7 @@ const Calculator = () => {
             Calculate Your Potential Funding
           </h2>
           <p className="text-mrg-gray max-w-2xl mx-auto">
-            Get an instant estimate of how much funding your business may qualify for based on your daily revenue and business profile.
+            Get an instant estimate of how much funding your business may qualify for based on your monthly revenue and business profile.
           </p>
         </div>
 
@@ -72,20 +72,20 @@ const Calculator = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="daily-revenue">Daily Revenue</Label>
+                  <Label htmlFor="monthly-revenue">Monthly Revenue</Label>
                   <div className="relative">
                     <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-mrg-gray w-4 h-4" />
                     <Input
-                      id="daily-revenue"
+                      id="monthly-revenue"
                       type="number"
-                      value={dailyRevenue}
-                      onChange={(e) => setDailyRevenue(Number(e.target.value))}
+                      value={monthlyRevenue}
+                      onChange={(e) => setMonthlyRevenue(Number(e.target.value))}
                       className="pl-10"
-                      placeholder="Enter daily revenue"
+                      placeholder="Enter monthly revenue"
                       min="0"
                     />
                   </div>
-                  <p className="text-sm text-mrg-gray">Average daily revenue over the last 3 months</p>
+                  <p className="text-sm text-mrg-gray">Average monthly revenue over the last 3 months</p>
                 </div>
 
                 <div className="space-y-3">
@@ -150,7 +150,7 @@ const Calculator = () => {
                     <div className="space-y-4 text-left">
                       <div className="flex justify-between py-2 border-b border-gray-200">
                         <span className="text-mrg-gray">Monthly Revenue</span>
-                        <span className="font-semibold">{formatCurrency(dailyRevenue * 30)}</span>
+                        <span className="font-semibold">{formatCurrency(monthlyRevenue)}</span>
                       </div>
                       <div className="flex justify-between py-2 border-b border-gray-200">
                         <span className="text-mrg-gray">Business Age</span>
